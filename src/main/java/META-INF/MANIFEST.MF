@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.6.0_33
+Tapestry-Module-Classes: com.diazcanejaconsultores.tapestry.fullcalendar.services.FullCalendarModule
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver

@@ -1,6 +1,16 @@
 *.class
+target
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Eclipse #
+.project
+
+# IntelliJ IDEA #
+.idea
+*.iml
+*.ipr
+*.iws

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.diazcanejaconsultores</groupId>
+	<artifactId>tapestry-fullcalendar</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0</version>
+
+	<name>Tapestry jQuery Fullcalendar Module</name>
+	<description>Tapestry calendar module based in jQuery Fullcalendar plugin</description>
+	<inceptionYear>2013</inceptionYear>
+	<url>https://github.com/gerardocdc/tapestry-fullcalendar</url>
+
+	<organization>
+		<name>Diaz-Caneja Consultores</name>
+		<url>http://www.diaz-caneja-consultores.com/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>gcolorado</id>
+			<name>Gerardo Colorado Diaz-Caneja</name>
+			<email>gcdiazcaneja@diaz-caneja-consultores.com</email>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+
+	<properties>
+		<tynamo-version>0.3.1</tynamo-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<scm>
+		<connection>scm:git:git://github.com/gerardocdc/tapestry-fullcalendar.git</connection> <!-- Read-Only access -->
+		<url>https://github.com/gerardocdc/tapestry-fullcalendar</url>
+		<developerConnection>scm:git:git@github.com:gerardocdc/tapestry-fullcalendar.git</developerConnection> <!-- Read+Write access -->
+	</scm>
+
+	<build>
+		<plugins>
+			<!-- Packs the module in a jar archive -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Tapestry-Module-Classes>
+								com.diazcanejaconsultores.tapestry.fullcalendar.services.FullCalendarModule
+							</Tapestry-Module-Classes>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<!-- Main Tynamo model module -->
+		<dependency>
+			<groupId>org.tynamo</groupId>
+			<artifactId>tapestry-model-hibernate</artifactId>
+			<version>${tynamo-version}</version>
+		</dependency>
+
+		<!-- Tynamo model testing module -->
+		<dependency>
+			<groupId>org.tynamo</groupId>
+			<artifactId>tapestry-model-test</artifactId>
+			<version>${tynamo-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- jQuery for Tapestry -->
+		<dependency>
+			<groupId>org.got5</groupId>
+			<artifactId>tapestry5-jquery</artifactId>
+			<version>3.3.4</version>
+		</dependency>
+	</dependencies>
+
+</project>
