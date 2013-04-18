@@ -21,7 +21,7 @@ Add the following dependency in your `pom.xml`.
 		<dependency>
 			<groupId>com.diazcanejaconsultores</groupId>
 			<artifactId>tapestry-fullcalendar</artifactId>
-			<version>1.0githu.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		...
 	</dependencies>
@@ -373,6 +373,8 @@ In your page class you must include:
 ## Note about jQuery
 
 jQuery uses `$` alias to select elements. In order to avoid collisions in JavaScript, and allow compability with other JavaScript frameworks, tapestry-fullcalendar uses the alias `jq` If you need to customize it in your FullCalendarModule in the contributeApplicationDefaults method.
+
+
 
 ## Copyright
 
